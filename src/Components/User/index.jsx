@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from '../../img/user__icon.jpg';
-import { ReactComponent as Settings__Icon } from '../../img/settings-24.svg'
+import { ReactComponent as SettingsIcon } from '../../img/settings-24.svg'
 
 class User extends React.Component {
   render() {
@@ -15,7 +15,7 @@ class User extends React.Component {
         <div className="user__name">
           Алиса
         </div>
-        <Settings__Icon className="user__settings__icon"/>
+        <SettingsIcon className="user__settings__icon"/>
       </div>
     );
   }
