@@ -29,6 +29,8 @@ code {
 }
 
 .Header {
+  z-index: 2;
+  position: relative; /* */
   width: 1680px;
   height: 32px;
   line-height: 32px;
@@ -113,6 +115,25 @@ code {
   height: 1196px;
 }
 
+.vertical-line {
+  position: absolute;
+  top: 20px; /* */
+  z-index: 1;
+  display: inline-block;
+  width: 2px;
+  height: 1142px;
+  background-color: #e6eaf0;
+}
+
+.gorizontal { /* TODO */
+  position: absolute;
+  z-index: 2;
+  width: 1678px;
+  height: 2px;
+  background-color: #e6eaf0;
+
+}
+
 .MainBody {
   /* border: 1px dashed black; */
 
@@ -124,12 +145,12 @@ code {
 }
 
 .NavMenu {
-  /* border: 1px dotted black; */
+  /* border-bottom: 2px solid black; */
 
   display: inline-block;
   width: 1320px;
-  height: 96px;
-  line-height: 96px;
+  height: 94px;
+  line-height: 94px;
   background-color: #ffffff;
 }
 
@@ -340,6 +361,39 @@ code {
   top: 2.9%;
 }
 
+.HideBalanceField {
+  position: absolute;
+  width: 360px;
+  height: 44px;
+  background-color: #e6eaf0;
+}
+
+.eye-closed {
+  position: relative;
+  left: 42px;
+  top: 10px;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.hide-balance-text {
+  position: absolute;
+  top: 12px;
+  left: 100px;
+  /* display: inline-block; */
+  width: 122px;
+  height: 20px;
+  /* font-family: "ProximaNova"; */
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #266dc2;
+}
+
 .Balance {
   /* border: 1px solid green; */
 
@@ -351,8 +405,10 @@ code {
 }
 
 .balance__amount {
-  position: relative;
-  left: 25px;
+  /*  TODO font-size: 0px; to hide text or display: none;*/
+  display: inline-block;
+  position: absolute;
+  left: 100px;
   top: 20px;
 
    width: 125px;
@@ -369,9 +425,10 @@ code {
 }
 
 .balance__note {
+  display: inline-block;
   position: absolute;
-  left: 24px;
-  top: 50px;
+  left: 100px;
+  top: 48px;
 
   width: 321px;
   height: 32px;
@@ -387,7 +444,7 @@ code {
 
 .Cards {
   /* border: 1px solid cyan; */
-
+  position: relative; /* */
   margin-top: 20px;
   width: 360px;
   height: 276px;
@@ -395,10 +452,30 @@ code {
 }
 
 .Card {
+  position: relative;
   margin-top: 20px;
   width: 768px;
   height: 84px;
   background-color: #fff;
+}
+
+.card__deposit__icon {
+  position: relative;
+  display: inline-block;
+  top: 16px;
+  left: 28px;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.card__other__icon {
+  position: absolute;
+  left: 320px;
+  top: 20px;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
 }
 
 .LeftSidebar__NavMenu {

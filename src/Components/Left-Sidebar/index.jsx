@@ -4,8 +4,14 @@ import Balance from '../Balance';
 import Cards from '../Cards';
 import NavMenu from '../NavMenu';
 import Card from '../Card';
+import HideBalanceField from '../Hide-Balance-Field';
 
 class LeftSidebar extends React.Component {
+  onClickHandler = () => {
+    var els = document.querySelectorAll('.balance__amount');
+    els.forEach( (el) => el.style.display = 'none' )
+  }
+
   render() {
     return (
       <div className="LeftSidebar">
@@ -13,6 +19,7 @@ class LeftSidebar extends React.Component {
           <NavMenu />
         </div>
         <User />
+        <HideBalanceField onClick = {this.onClickHandler}/>
         <Balance />
         <Cards />
         <Card />

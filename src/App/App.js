@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
+import styled from 'styled-components';
 
 import IndexPage from '../Pages/Index';
 import AboutPage from '../Pages/About';
@@ -10,15 +11,24 @@ import LeftSidebar from '../Components/Left-Sidebar';
 import MainBody from '../Components/Main-Body';
 import Sidebar from '../Components/Sidebar';
 import Menu from '../Components/Menu';
+import VerticalLine from '../Components/Lines/index.jsx'
+import GorizontalLine from '../Components/Lines/gorizontal.jsx'
+
+const Button = styled.button``;
+// export default Button;
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <GorizontalLine />
         <Header />
         <LeftSidebar />
+        <VerticalLine />
+
         <MainBody />
 
+        <Button>I'm styled components button</Button>
         <Menu />
 
         <Sidebar isOpen={true} fontSize={40}>
