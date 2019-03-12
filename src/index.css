@@ -285,6 +285,7 @@ code {
 
 .EventHistory {
   /* border: 1px solid orange; */
+  position: relative;
 
   margin-top: 36px;
   margin-left: auto;
@@ -293,6 +294,133 @@ code {
   height: 828px;
   border-radius: 4px;
   background-color: #ffffff;
+}
+
+.history-event {
+  display: inline-block;
+  position: relative;
+  margin-top: 256px;
+  left: 32px;
+  width: 848px;
+  height: 68px;
+}
+
+.history-event__icon {
+  /* display: inline-block; */
+  position: absolute;
+  top: 17px;
+  left: 8px;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.history-event__type {
+  top: 12px;
+  left: 52px;
+  position: absolute;
+  /* display: inline-block; */
+ width: 113px;
+ height: 20px;
+ /* font-family: ProximaNova; */
+ font-family: ;
+ font-size: 14px;
+ font-weight: normal;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: 1.43;
+ letter-spacing: normal;
+ color: #8b98a7;
+}
+
+.history-event__name {
+  position: absolute;
+  top: 32px;
+  left: 52px;
+  /* display: inline-block; */
+ width: 477px;
+ height: 24px;
+ font-family: ProximaNova;
+ font-size: 18px;
+ font-weight: normal;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: 1.33;
+ letter-spacing: normal;
+ color: #262c40;
+}
+
+.history-event__card-from {
+  /* display: block; */
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  /* left: 677px; /* why dont work right: 16px */
+ width: 155px;
+ height: 20px;
+ font-family: ProximaNova;
+ font-size: 14px;
+ font-weight: normal;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: 1.43;
+ letter-spacing: normal;
+ text-align: right;
+ color: #8b98a7;
+}
+
+.history-event__sum {
+  display: inline-block;
+  position: absolute;
+  top: 32px;
+  right: 16px; /* чтобы было ровно, или как еще можно было сделать? */
+  height: 24px;
+}
+
+.sum__integer-part  {
+  display: inline-block;
+ /* width: 71px; */
+ height: 24px;
+ font-family: Gilroy;
+ font-size: 20px;
+ font-weight: normal;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: 1.2;
+ letter-spacing: normal;
+ text-align: right;
+ color: #262c40;
+}
+
+.sum__residue-part {
+  display: inline-block;
+  /* width: 47px; */
+  height: 24px;
+  font-family: Gilroy;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: #8b98a7;
+}
+
+.history-event__sum-status {
+  position: absolute;
+  display: inline-block;
+  /* width: 16px; */
+  height: 16px;
+  /* object-fit: contain; */
+}
+
+.event__separator {
+  position: relative;
+  top: 0;
+  left: 84px;
+  width: 796px;
+  height: 2px;
+  background-color: #e6eaf0;
 }
 
 .user {
