@@ -237,9 +237,9 @@ code {
 }
 
 .NavMenu li:last-of-type {
+  top: 0;
   margin-left: 634px;
   position: relative;
-  bottom: 95px; /* TODO */
 }
 
 .NavMenu ul {
@@ -382,7 +382,7 @@ code {
   top: 12px;
   left: 100px;
   /* display: inline-block; */
-  width: 122px;
+  width: 191px; /* increased for text which is longer than in any other state from 122px */
   height: 20px;
   /* font-family: "ProximaNova"; */
   font-size: 16px;
@@ -454,7 +454,7 @@ code {
 .Card {
   position: relative;
   margin-top: 20px;
-  width: 768px;
+  width: 360px;
   height: 84px;
   background-color: #fff;
 }
@@ -515,6 +515,13 @@ code {
     padding-left: 136px;
 
     height: 96px;
+  }
+
+  .NavMenu li:last-of-type {
+    top: -95px;
+    margin-left: 634px;
+    position: relative;
+    /* bottom: 95px; why dont work? */
   }
 
   .Header {

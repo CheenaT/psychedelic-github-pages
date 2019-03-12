@@ -8,9 +8,9 @@ class Card extends React.Component {
       <div className="Card">
         <DepositIcon className="card__deposit__icon"/>
         <OtherIcon className="card__other__icon"/>
-        <div className="balance__amount">123 123.13</div>
+        <div className="balance__amount">{this.props.balance}</div>
 
-        <div className="balance__note">sdfskdfjk</div>
+        <div className="balance__note">{this.props.name}</div>
       </div>
     );
   }

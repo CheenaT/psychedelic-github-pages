@@ -1,6 +1,6 @@
 import React from 'react';
-import { ReactComponent as GasLogoIcon } from '../../img/05-logo-icon-blue.svg';
 import { ReactComponent as SearchIcon } from '../../img/search-24.svg';
+import { ReactComponent as GasLogoIcon } from '../../img/05-logo-icon-blue.svg';
 
 class NavMenu extends React.Component {
   render() {
