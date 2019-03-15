@@ -5,6 +5,13 @@ import Cards from "../Cards";
 import NavMenu from "../NavMenu";
 import Card from "../Card";
 import HideBalanceField from "../Hide-Balance-Field";
+import DepositIcon from "../../img/deposit.png";
+import PlayMarketIcon from "../../img/greyPM.png";
+import AppleStoreIcon from "../../img/greyAS.png";
+import PlusIcon from "../../img/plus.png";
+import CreditIcon  from "../../img/credit.png";
+import AccountIcon from "../../img/account.png";
+import CardIcon from "../../img/card.png";
 
 import styled from 'styled-components';
 
@@ -52,6 +59,17 @@ class LeftSidebar extends React.Component {
             </li>
           ))}
         </List>
+        <div className="left-sidebar__add-product">
+            <img className="left-sidebar__icon" src={PlusIcon} alt="" width="32px" height="32px" />
+            <img className="left-sidebar__icon" src={DepositIcon} alt="" width="32px" height="32px" />
+            <img className="left-sidebar__icon" src={CreditIcon} alt="" width="32px" height="32px" />
+            <img className="left-sidebar__icon" src={AccountIcon} alt="" width="32px" height="32px" />
+            <img className="left-sidebar__icon" src={CardIcon} alt="" width="32px" height="32px" />
+          <div className="add-product__button">Добавить новый продукт</div>
+          <div className="add-product__note">Откройте новую карту, счет или подайте заявку на кредит</div>
+        </div>
+        <img className="left-sidebar__store-icon" src={AppleStoreIcon} alt="" width="150px" height="44px" />
+        <img className="left-sidebar__store-icon" src={PlayMarketIcon} alt="" width="150px" height="44px" />
       </div>
     );
   }

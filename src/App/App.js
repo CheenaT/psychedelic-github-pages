@@ -18,9 +18,36 @@ const Button = styled.button``;
 // export default Button;
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    console.log('constructor');
+  }
+
+  getDerivedStatesFromProps() {
+    console.log('getDerivedStatesFromProps');
+  }
+
+  componentDidMount() {
+    console.log('componentDidMount');
+  }
+
+  shouldComponentUpdate() {
+    console.log('shouldComponentUpdate');
+  }
+
+  componentDidUpdate() {
+    console.log('componentDidUpdate');
+  }
+
+  componentWillUnmount() {
+    console.log('componentWillUnmount');
+  }
+
   render() {
     return (
       <div className="App">
+        { console.log('render') }
         <GorizontalLine />
         <Header />
         <LeftSidebar />
