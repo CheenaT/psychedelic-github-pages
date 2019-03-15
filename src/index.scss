@@ -1,0 +1,1138 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.slick-center {
+    -webkit-transform: scale(1.2) !important;
+    -moz-transform: scale(1.2) !important;
+    transform: scale(1.2) !important;
+    animation: leafing;
+    animation: 3s;
+}
+
+@keyframes leafing {
+  0% {
+    -webkit-transform: scale(1) !important;
+    -moz-transform: scale(1) !important;
+    transform: scale(1) !important;
+  }
+  100% {
+    -webkit-transform: scale(1.2) !important;
+    -moz-transform: scale(1.2) !important;
+    transform: scale(1.2) !important;
+  }
+}
+
+// .slick-slide:nth-child(3) {
+//   background-color: red;
+// }
+
+// .sc-bwzfXH {
+//   -webkit-transform: scale(0.9);
+//   -moz-transform: scale(0.9);
+//   transform: scale(0.9);
+// }
+
+.slider__child {
+  position: absolute;
+  // top: 7px;
+  right: -6px;
+  width: 1128px;
+  height: 50px; /**/
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("./fonts/ProximaNova-Regular.eot");
+  src: url("./fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/ProximaNova-Regular.woff") format("woff"),
+    url("./fonts/ProximaNova-Regular.ttf") format("truetype"),
+    url("./fonts/ProximaNova-Regular.svg") format("svg");
+}
+
+.App {
+  width: 1684px; /* TODO after clear all border 1px set to 1680px */
+  height: 1228px;
+  background-color: #eef1f3;
+}
+
+.Header {
+  z-index: 2;
+  position: relative; /* */
+  width: 1680px;
+  height: 32px;
+  line-height: 32px;
+  background-image: linear-gradient(to right, #0057b7, #0d356c);
+
+  li {
+    position: relative;
+    /* left: 1179px; */
+    left: 70.2%;
+
+    display: inline;
+    margin-right: 50px;
+  }
+
+  li:first-child {
+    width: 147px;
+    height: 20px;
+    // font-family: "proxima-nova";
+    // font-family: times;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color: #fdfbfc;
+  }
+
+  li:nth-last-child(3) {
+    width: 149px;
+    height: 20px;
+    margin-right: 32px;
+    font-family: "proxima-nova";
+    font-family: times;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color: #fdfbfc;
+  }
+
+  li:nth-last-child(2) {
+    /* margin-right: 8px; */
+    /* margin-left: 32px; */
+    margin: 0px;
+  }
+
+  li:last-of-type {
+    margin-right: 0px;
+    margin-left: 8px;
+
+    width: 46px;
+    height: 20px;
+    font-family: "proxima-nova";
+    font-family: times;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color: #fdfbfc;
+  }
+}
+
+.icon__exit {
+  /* margin-left: 32px; TODO */
+  width: 11px;
+  height: 12px;
+  object-fit: contain;
+}
+
+.LeftSidebar {
+  /* border: 1px solid black; */
+  background-color: #e6eaf0; /* TODO поправиить вертикальную линию возле левого sidebar'a upd: это относится больше к адаптивной вёрстке */
+  display: inline-block;
+  position: relative;
+  float: left;
+  width: 360px;
+  height: 1196px;
+}
+
+.left-sidebar__add-product {
+  position: relative;
+  margin-top: 20px;
+
+  width: 359px;
+  height: 152px;
+  background-color: #ffffff;
+}
+
+.add-product__button {
+  position: absolute;
+  top: 68px;
+  left: 28px;
+  width: 185px;
+  height: 20px;
+  font-family: ProximaNova;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #266dc2;
+}
+
+.add-product__note {
+  position: absolute;
+  top: 92px;
+  left: 28px;
+ width: 303px;
+ height: 40px;
+ font-family: ProximaNova;
+ font-size: 16px;
+ font-weight: normal;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: 1.25;
+ letter-spacing: normal;
+ color: #8b98a7;
+}
+
+.left-sidebar__icon {
+  position: relative;
+  top: 24px;
+  left: 28px;
+  margin-right: 11px;
+}
+
+.left-sidebar__store-icon {
+  position: relative;
+  top: 28px;
+  left: 20px;
+  margin-right: 16px;
+}
+
+.vertical-line {
+  position: absolute;
+  top: 20px; /* */
+  z-index: 1;
+  display: inline-block;
+  width: 2px;
+  height: 1142px;
+  background-color: #e6eaf0;
+}
+
+.gorizontal {
+  /* TODO */
+  position: absolute;
+  z-index: 2;
+  width: 1678px;
+  height: 2px;
+  background-color: #e6eaf0;
+}
+
+.MainBody {
+  /* border: 1px dashed black; */
+
+  background-color: #eef1f3;
+  display: inline-block;
+  position: relative;
+  width: 1320px;
+  height: 1196px; /* 1100 + 96 */
+}
+
+.NavMenu {
+  /* border-bottom: 2px solid black; */
+
+  display: inline-block;
+  width: 1320px;
+  height: 94px;
+  line-height: 94px;
+  background-color: #ffffff;
+}
+
+.NavMenu__Logo {
+  /* display: inline-block; */
+  position: absolute;
+  left: 60px;
+  top: 23px;
+  bottom: 21px;
+
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.NavMenu__Offers {
+  border-radius: 50%;
+  position: absolute;
+  left: 586px;
+  top: 39px;
+
+  width: 20px;
+  height: 20px;
+  background-color: #65cc7b;
+}
+
+.offers__counter {
+  position: absolute;
+  left: 6px;
+  bottom: 2px;
+  /* left: 586px;
+  top: 39px; */
+  width: 8px;
+  height: 16px;
+  font-family: "proxima-nova";
+  font-family: times;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.NavMenu__search__icon {
+  position: absolute;
+  top: 7px; /* TODO right positioning & svg color*/
+  margin-left: 5px;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  /* bottom: 0; */
+  left: 1182px;
+  height: 96px;
+}
+
+.NavMenu li {
+  display: inline;
+  margin-right: 20px;
+
+  /* width: 66px; */
+  /* height: 24px; */
+  font-family: "proxima-nova";
+  font-family: times;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #262c40;
+}
+
+.NavMenu li:nth-child(1) {
+  /* width: 66px; */
+  /* height: 24px; */
+}
+
+.NavMenu li:nth-last-child(2) {
+  margin-right: 0;
+}
+
+.NavMenu li:last-of-type {
+  top: 0;
+  margin-left: 634px;
+  position: relative;
+}
+
+.NavMenu ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 136px;
+}
+
+.search-field {
+  border: 0;
+  /* bottom: 50px; */
+
+  /* TODO  */
+  /* color: grey; */
+  /* background-color: #8b98a7; */
+  display: inline-block;
+  /*  */
+  width: 46px;
+  height: 20px;
+  font-family: "proxima-nova";
+  font-family: times;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #8b98a7;
+}
+
+.SliderCustom {
+  /* border: 1px solid pink; */
+  position: relative; /**/
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1112px;
+  height: 160px;
+  border-radius: 4px;
+  box-shadow: 0 0 9px 0 rgba(13, 53, 108, 0.15);
+  background-color: #f0f1f3;
+}
+
+.EventHistory {
+  /* border: 1px solid orange; */
+  position: relative;
+
+  margin-top: 36px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  height: 828px;
+  border-radius: 4px;
+  background-color: #ffffff;
+
+  input {
+    // position: absolute;
+    // top: 160px;
+    // left: 48px;
+    margin-top: 16px;
+    margin-left: 16px;
+    border: none;
+     width: 792px;
+     height: 18px; /* */
+     font-family: ProximaNova;
+     font-size: 18px;
+     font-weight: normal;
+     font-style: normal;
+     font-stretch: normal;
+     line-height: 1.33;
+     letter-spacing: normal;
+     color: #8b98a7;
+
+     &:focus{
+       outline: none;
+     }
+  }
+}
+
+.event-history__last-date {
+  position: absolute;
+  top: -24px;
+  left: 32px;
+ width: 848px;
+ height: 24px;
+ font-family: ProximaNova;
+ font-size: 18px;
+ font-weight: bold;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: 1.33;
+ letter-spacing: normal;
+ color: #262c40;
+}
+
+.event-history__label {
+  position: absolute;
+  top: 40px;
+  left: 32px;
+  width: 848px;
+  height: 32px;
+  /* font-family: ProximaNova; */
+  font-family: times;
+  font-size: 28px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  color: #262c40;
+}
+
+.event-history__product-sorting {
+  position: absolute;
+  top: 102px;
+  left: 32px;
+  /* border-bottom: 1px dashed rgba(38, 109, 194, 0.3); */
+  /* border-image:url("http://i.stack.imgur.com/wLdVc.png"); */
+  /* border-image-width: 1; */
+  width: 144px; /* не помещалось в 143 пикселя*/
+  height: 20px;
+  /* font-family: ProximaNova; */
+  font-family: times;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #266dc2;
+}
+
+.event-history__line-container {
+  position: relative;
+  top: 123px;
+  height: 1px;
+  width: 135px;
+}
+
+.event-history__line {
+  color: white;
+  position: absolute;
+  left: 29px;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    transparent 50%,
+    rgba(38, 109, 194, 0.3) 50%
+  );
+  background-size: 8px 100%;
+}
+
+.event-history__line2 {
+  /* */
+  color: white;
+  position: absolute;
+  // top: 0px;
+  left: 211px;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    transparent 50%,
+    rgba(38, 109, 194, 0.3) 50%
+  );
+  background-size: 8px 100%;
+}
+
+.event-history__time-sorting {
+  position: absolute;
+  top: 102px;
+  left: 215px;
+  /* border-bottom: 1px dashed rgba(38, 109, 194, 0.3); */
+  width: 98px; /* не помещалось в 143 пикселя*/
+  height: 20px;
+  /* font-family: ProximaNova; */
+  font-family: times;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #266dc2;
+}
+
+.event-history__upload-report-label {
+  position: absolute;
+  top: 102px;
+  right: 320px;
+  width: 124px;
+  height: 20px;
+  font-family: ProximaNova;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #266dc2;
+}
+
+.event-history__arrow-down-icon {
+  position: absolute;
+  top: 107px;
+  left: 165px;
+  width: 14px;
+  height: 7.8px;
+  object-fit: contain;
+}
+
+.event-history__button-round-small {
+  position: absolute;
+  top: 100px;
+  right: 456px;
+}
+
+.event-history__input {
+  position: absolute;
+  top: 144px;
+  left: 32px;
+  width: 848px;
+  height: 56px;
+  border-radius: 2px;
+  border: solid 2px #e6eaf0;
+  background-color: #ffffff;
+}
+
+.event-history__show-more-button {
+  position: absolute;
+  left: 32px;
+  bottom: 52px;
+  width: 848px;
+  height: 44px;
+  border-radius: 2px;
+  background-color: #eef1f3;
+  border: none;
+  font-family: ProximaNova;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: center;
+  color: #266dc2;
+  cursor: pointer;
+}
+
+.history-event {
+  display: inline-block;
+  position: relative;
+  /* margin-top: 256px; */
+  left: 32px;
+  width: 848px;
+  height: 68px;
+}
+
+.history-event__icon {
+  /* display: inline-block; */
+  position: absolute;
+  top: 17px;
+  left: 8px;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.history-event__type {
+  top: 12px;
+  left: 52px;
+  position: absolute;
+  /* display: inline-block; */
+  width: 250px;
+  height: 20px;
+  /* font-family: ProximaNova; */
+  font-family: times;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: #8b98a7;
+}
+
+.history-event__name {
+  position: absolute;
+  top: 32px;
+  left: 52px;
+  /* display: inline-block; */
+  width: 477px;
+  height: 24px;
+  font-family: ProximaNova;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #262c40;
+}
+
+.history-event__card-from {
+  /* display: block; */
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  /* left: 677px; /* why dont work right: 16px */
+  width: 155px;
+  height: 20px;
+  font-family: ProximaNova;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: right;
+  color: #8b98a7;
+}
+
+.history-event__sum {
+  display: inline-block;
+  position: absolute;
+  top: 32px;
+  right: 16px; /* чтобы было ровно, или как еще можно было сделать? */
+  height: 24px;
+}
+
+.sum__integer-part {
+  display: inline-block;
+  /* width: 71px; */
+  height: 24px;
+  font-family: Gilroy;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: right;
+  color: #262c40;
+}
+
+.sum__residue-part {
+  display: inline-block;
+  /* width: 47px; */
+  height: 24px;
+  font-family: Gilroy;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: #8b98a7;
+}
+
+.history-event__sum-status {
+  position: absolute;
+  display: inline-block;
+  /* width: 16px; */
+  height: 16px;
+  /* object-fit: contain; */
+}
+
+.event__separator {
+  position: relative;
+  top: 0;
+  left: 84px;
+  width: 796px;
+  height: 2px;
+  background-color: #e6eaf0;
+}
+
+.user {
+  /* border: 1px solid grey; */
+
+  /* position: relative;
+  display: inline-block; */
+  width: 360px;
+  height: 94px;
+  background-color: #ffffff;
+}
+
+.user__icon img {
+  margin-top: 19px;
+  margin-left: 28px;
+  /* position: relative; */
+  /* display: inline-block; */
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.user__name {
+  position: absolute;
+  top: 44px;
+  left: 100px;
+  /* display: inline-block; */
+
+  width: 247px;
+  height: 28px;
+  font-family: "proxima-nova", serif;
+  font-family: times;
+  font-size: 22px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.27;
+  letter-spacing: normal;
+  color: #262c40;
+}
+
+.user__greetings {
+  position: absolute;
+  top: 20px;
+  left: 100px;
+
+  width: 108px;
+  height: 20px;
+  font-family: "proxima-nova";
+  font-family: times;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #8b98a7;
+}
+
+.user__settings__icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  left: 86.7%;
+  top: 2.9%;
+}
+
+.HideBalanceField {
+  position: absolute;
+  width: 360px;
+  height: 44px;
+  background-color: #e6eaf0;
+}
+
+.eye-closed {
+  position: relative;
+  cursor: pointer;
+  left: 42px;
+  top: 10px;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.hide-balance-text {
+  position: absolute;
+  cursor: pointer;
+  top: 12px;
+  left: 100px;
+  /* display: inline-block; */
+  width: 191px; /* increased for text which is longer than in any other state from 122px */
+  height: 20px;
+  /* font-family: "ProximaNova"; */
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #266dc2;
+}
+
+.Balance {
+  /* border: 1px solid green; */
+
+  position: relative;
+  margin-top: 44px;
+  width: 358px;
+  height: 100px;
+  background-color: #ffffff;
+}
+
+.balance__amount {
+  /*  TODO font-size: 0px; to hide text or display: none;*/
+  display: inline-block;
+  position: absolute;
+  left: 100px;
+  top: 20px;
+
+  width: 125px;
+  height: 24px;
+  /* font-family: Gilroy; */
+  font-family: times;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.09;
+  letter-spacing: normal;
+  color: #262c40;
+}
+
+.balance__note {
+  display: inline-block;
+  position: absolute;
+  left: 100px;
+  top: 48px;
+
+  width: 321px;
+  height: 32px;
+  font-family: "proxima-nova";
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #8b98a7;
+}
+
+.Cards {
+  /* border: 1px solid cyan; */
+  position: relative; /* */
+  margin-top: 20px;
+  width: 360px;
+  height: 276px;
+  background-color: #fff;
+}
+
+.Card {
+  position: relative;
+  margin-top: 20px;
+  width: 360px;
+  height: 84px;
+  background-color: #fff;
+}
+
+.card__deposit__icon {
+  position: relative;
+  display: inline-block;
+  top: 16px;
+  left: 28px;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.card__other__icon {
+  position: absolute;
+  left: 320px;
+  top: 20px;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.LeftSidebar__NavMenu {
+  display: none;
+}
+
+@media screen and (max-width: 1280px) {
+  .App {
+    width: 1284px; /* TODO after clear all border 1px set to 1280px */
+    height: 1228px;
+    background-color: #eef1f3;
+  }
+
+  .MainBody {
+    /* border: 1px dashed black; */
+
+    background-color: #eef1f3;
+    display: inline-block;
+    position: relative;
+    width: 920px;
+    height: 1196px; /* 1100 + 96 */
+  }
+
+  .NavMenu {
+    /* border: 1px dotted black; */
+
+    display: inline-block;
+    width: 920px;
+    height: 96px;
+    line-height: 96px;
+  }
+
+  .NavMenu ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 136px;
+
+    height: 96px;
+  }
+
+  .NavMenu li:last-of-type {
+    top: -95px;
+    margin-left: 634px;
+    position: relative;
+    /* bottom: 95px; why dont work? */
+  }
+
+  .Header {
+    width: 1280px;
+    height: 32px;
+    line-height: 32px;
+    background-image: linear-gradient(to right, #0057b7, #0d356c);
+  }
+
+  .Header li {
+    position: relative;
+    /* left: 1179px; */
+    left: 60.4%;
+
+    display: inline;
+    margin-right: 50px;
+    font-family: "proxima-nova";
+  }
+
+  .Header li:last-of-type {
+    /* margin-right: 100px; TODO */
+    margin-left: 8px;
+
+    width: 46px;
+    height: 20px;
+    /* font-family: 'proxima-nova'; */
+    font-family: times;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color: #fdfbfc;
+  }
+
+  .Slider {
+    /* border: 1px solid pink; */
+
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 706px;
+    height: 160px;
+    border-radius: 4px;
+    box-shadow: 0 0 9px 0 rgba(13, 53, 108, 0.15);
+    background-color: #f0f1f3;
+  }
+
+  .EventHistory {
+    /* border: 1px solid orange; */
+
+    margin-top: 36px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 792px;
+    height: 828px;
+    border-radius: 4px;
+    background-color: #ffffff;
+  }
+
+  .LeftSidebar__NavMenu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .LeftSidebar {
+    /* border: 1px solid black; */
+
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 768px;
+    height: 1017px;
+  }
+
+  .LeftSidebar__NavMenu {
+    display: block;
+
+    width: 768px;
+    height: 96px;
+    background-color: #ffffff;
+  }
+
+  .user {
+    display: none;
+  }
+
+  .Balance {
+    /* border: 1px solid green; */
+
+    margin-top: 3px;
+    width: 768px;
+    height: 120px;
+    background-color: #ffffff;
+  }
+
+  .Cards {
+    /* border: 1px solid cyan; */
+
+    margin-top: 20px;
+    width: 768px;
+    height: 276px;
+    background-color: #fff;
+  }
+
+  .Card {
+    margin-top: 20px;
+    width: 768px;
+    height: 84px;
+    background-color: #fff;
+  }
+
+  .App {
+    width: 772px; /* TODO after clear all border 1px set to 768px */
+    height: 1145px;
+    background-color: #eef1f3;
+  }
+
+  .MainBody {
+    display: none;
+  }
+
+  .NavMenu {
+    /* border: 1px dotted black; */
+
+    /* display: block; */
+    /* position: fixed; */
+    display: inline-block;
+    width: 768px;
+    height: 96px;
+    line-height: 96px;
+  }
+
+  .Header {
+    width: 768px;
+    height: 32px;
+    line-height: 32px;
+    background-image: linear-gradient(to right, #0057b7, #0d356c);
+  }
+
+  .Header li {
+    position: relative;
+    /* left: 1179px; */
+    left: 60.4%;
+
+    display: inline;
+    margin-right: 50px;
+  }
+
+  .Header li:last-of-type {
+    /* margin-right: 100px; TODO */
+    margin-left: 8px;
+
+    width: 46px;
+    height: 20px;
+    font-family: "proxima-nova";
+    font-family: times;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color: #fdfbfc;
+  }
+
+  .Slider {
+    display: none;
+    /* border: 1px solid pink; */
+
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 706px;
+    height: 160px;
+    border-radius: 4px;
+    box-shadow: 0 0 9px 0 rgba(13, 53, 108, 0.15);
+    background-color: #f0f1f3;
+  }
+
+  .EventHistory {
+    display: none;
+    /* border: 1px solid orange; */
+
+    margin-top: 36px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 792px;
+    height: 828px;
+    border-radius: 4px;
+    background-color: #ffffff;
+  }
+}
