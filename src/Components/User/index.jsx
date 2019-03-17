@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from '../../img/user__icon.jpg';
+import Image from '../../img/spidermeme spidey sense.png';
 import { ReactComponent as SettingsIcon } from '../../img/settings-24.svg'
 
 class User extends React.Component {
