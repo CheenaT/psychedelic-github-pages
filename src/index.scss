@@ -34,6 +34,7 @@
 
 .slider__child {
   position: absolute;
+  display: none; /* */
   // top: 7px;
   right: -6px;
   width: 1128px;
@@ -67,6 +68,16 @@ code {
 .App {
   width: 1684px; /* TODO after clear all border 1px set to 1680px */
   height: 1228px;
+  @media screen and (max-width: 1280px) {
+    width: 1280px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 1024px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 769px; /* или лучше 768? 8 */
+    height: 1145px;
+  }
   background-color: #eef1f3;
 }
 
@@ -74,15 +85,36 @@ code {
   z-index: 2;
   position: relative; /* */
   width: 1680px;
+  @media screen and (max-width: 1280px) {
+    width: 1280px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 1024px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 768px;
+  }
   height: 32px;
   line-height: 32px;
   background-image: linear-gradient(to right, #0057b7, #0d356c);
+
+  ul {
+    padding-left: 0;
+  }
 
   li {
     position: relative;
     /* left: 1179px; */
     left: 70.2%;
-
+    @media screen and (max-width: 1280px) {
+      left: 60.4%;
+    }
+    @media screen and (max-width: 1024px) {
+      left: 54.4%;
+    }
+    @media screen and (max-width: 768px) {
+      left: 294px;
+    }
     display: inline;
     margin-right: 50px;
   }
@@ -123,9 +155,11 @@ code {
   }
 
   li:last-of-type {
+    // position: absolute;
+    // right: 31px;
     margin-right: 0px;
     margin-left: 8px;
-
+    // TODO right
     width: 46px;
     height: 20px;
     font-family: "proxima-nova";
@@ -155,13 +189,20 @@ code {
   float: left;
   width: 360px;
   height: 1196px;
+  @media screen and (max-width: 768px) {
+    width: 768px;
+    height: 1145px;
+    background-color: #eef1f3;
+  }
 }
 
 .left-sidebar__add-product {
   position: relative;
   margin-top: 20px;
-
   width: 359px;
+  @media screen and (max-width: 768px) {
+    width: 768px;
+  }
   height: 152px;
   background-color: #ffffff;
 }
@@ -196,6 +237,9 @@ code {
  line-height: 1.25;
  letter-spacing: normal;
  color: #8b98a7;
+ @media screen and (max-width: 768px){
+   width: 712px;
+ }
 }
 
 .left-sidebar__icon {
@@ -210,6 +254,9 @@ code {
   top: 28px;
   left: 20px;
   margin-right: 16px;
+  @media screen and (max-width: 768px) {
+    left: 226px;
+  }
 }
 
 .vertical-line {
@@ -217,6 +264,9 @@ code {
   top: 20px; /* */
   z-index: 1;
   display: inline-block;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
   width: 2px;
   height: 1142px;
   background-color: #e6eaf0;
@@ -238,17 +288,44 @@ code {
   display: inline-block;
   position: relative;
   width: 1320px;
+  @media screen and (max-width: 1280px) {
+    width: 920px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 664px;
+  }
   height: 1196px; /* 1100 + 96 */
 }
 
 .NavMenu {
   /* border-bottom: 2px solid black; */
 
-  display: inline-block;
+  display: block; /* why this needed? */
   width: 1320px;
+  @media screen and (max-width: 1280px) {
+    width: 920px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 664px;
+  }
   height: 94px;
   line-height: 94px;
   background-color: #ffffff;
+
+  li:last-of-type {
+    top: 0;
+    margin-left: 634px;
+    position: relative;
+    @media screen and (max-width: 1280px) {
+      top: -95px; /* */
+    }
+    @media screen and (max-width: 786px) {
+      margin-left: 116px; /* 70 + 46 */
+      position: relative;
+      right: 32px;
+      top: 0px;
+    }
+  }
 }
 
 .NavMenu__Logo {
@@ -302,6 +379,14 @@ code {
   height: 24px;
   object-fit: contain;
   /* bottom: 0; */
+  @media screen and (max-width: 1024px) {
+    left: auto; /* как лучше отменить значение? initial or auto or something else */
+    right: 24px;
+  }
+  @media screen and (max-width: 768px) {
+    left: auto; /* как лучше отменить значение? initial or auto or something else */
+    right: 32px;
+  }
   left: 1182px;
   height: 96px;
 }
@@ -332,12 +417,6 @@ code {
   margin-right: 0;
 }
 
-.NavMenu li:last-of-type {
-  top: 0;
-  margin-left: 634px;
-  position: relative;
-}
-
 .NavMenu ul {
   margin-top: 0;
   margin-bottom: 0;
@@ -345,6 +424,9 @@ code {
 }
 
 .search-field {
+  @media screen and (max-width: 1024px) {
+    // display: none;
+  }
   border: 0;
   /* bottom: 50px; */
 
@@ -374,6 +456,12 @@ code {
   margin-right: auto;
   width: 1112px;
   height: 160px;
+  @media screen and (max-width: 1280px) {
+    width: 706px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 516px;
+  }
   border-radius: 4px;
   box-shadow: 0 0 9px 0 rgba(13, 53, 108, 0.15);
   background-color: #f0f1f3;
@@ -388,6 +476,15 @@ code {
   margin-right: auto;
   width: 1200px;
   height: 828px;
+  @media screen and (max-width: 1280px) {
+    width: 792px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 608px;
+    // input { doesnt work
+    //   width: 492px;
+    // }
+  }
   border-radius: 4px;
   background-color: #ffffff;
 
@@ -399,7 +496,13 @@ code {
     margin-left: 16px;
     border: none;
      width: 792px;
-     height: 18px; /* */
+     @media screen and (max-width: 1280px  ) {
+         width: 672px;
+     }
+     @media screen and (max-width: 1024px) {
+         width: 492px;
+     }
+     height: 24px; /* */
      font-family: ProximaNova;
      font-size: 18px;
      font-weight: normal;
@@ -527,6 +630,9 @@ code {
   position: absolute;
   top: 102px;
   right: 320px;
+  @media screen and (max-width: 1280px) {
+    right: 32px;
+  }
   width: 124px;
   height: 20px;
   font-family: ProximaNova;
@@ -552,14 +658,23 @@ code {
   position: absolute;
   top: 100px;
   right: 456px;
+  @media screen and (max-width: 1280px) {
+    right: 168px;
+  }
 }
 
-.event-history__input {
+.event-history__input { /* убрать его из-за верхнего инпута */
   position: absolute;
   top: 144px;
   left: 32px;
   width: 848px;
   height: 56px;
+  @media screen and (max-width: 1280px) {
+    width: 728px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 548px;
+  }
   border-radius: 2px;
   border: solid 2px #e6eaf0;
   background-color: #ffffff;
@@ -570,6 +685,12 @@ code {
   left: 32px;
   bottom: 52px;
   width: 848px;
+  @media screen and (max-width: 1280px) {
+    width: 728px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 548px;
+  }
   height: 44px;
   border-radius: 2px;
   background-color: #eef1f3;
@@ -592,6 +713,12 @@ code {
   /* margin-top: 256px; */
   left: 32px;
   width: 848px;
+  @media screen and (max-width: 1280px) {
+    width: 728px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 548px;
+  }
   height: 68px;
 }
 
@@ -709,6 +836,12 @@ code {
   top: 0;
   left: 84px;
   width: 796px;
+  @media screen and (max-width: 1280px) {
+    width: 676px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 496px;
+  }
   height: 2px;
   background-color: #e6eaf0;
 }
@@ -784,6 +917,13 @@ code {
   width: 360px;
   height: 44px;
   background-color: #e6eaf0;
+  @media screen and (max-width: 768px) {
+    z-index: 1;
+    width: 768px;
+    height: 120px;
+    margin-top: 2px;
+    background-color: rgba(0,0,0,0);
+  }
 }
 
 .eye-closed {
@@ -794,6 +934,10 @@ code {
   width: 24px;
   height: 24px;
   object-fit: contain;
+  @media screen and (max-width: 768px) {
+    top: 52px;
+    left: 307px;
+  }
 }
 
 .hide-balance-text {
@@ -812,6 +956,11 @@ code {
   line-height: 1.25;
   letter-spacing: normal;
   color: #266dc2;
+  @media screen and (max-width: 768px) {
+    width: 122px;
+    top: 54px;
+    left: 339px;
+  }
 }
 
 .Balance {
@@ -830,8 +979,10 @@ code {
   position: absolute;
   left: 100px;
   top: 20px;
-
-  width: 125px;
+  @media screen and (max-width: 768px) {
+    left: 100px;
+  }
+  width: 137px;
   height: 24px;
   /* font-family: Gilroy; */
   font-family: times;
@@ -844,12 +995,64 @@ code {
   color: #262c40;
 }
 
+.balance__main-amount {
+  @media screen and (max-width: 768px) {
+   width: 130px;
+   height: 24px;
+   font-family: Gilroy;
+   font-size: 22px;
+   font-weight: normal;
+   font-style: normal;
+   font-stretch: normal;
+   line-height: 1.09;
+   letter-spacing: normal;
+   color: #262c40;
+  }
+}
+
+.amount-with-cents {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  right: 208px;
+  text-align: right;
+  width: 137px; /* как лучше сделать? */
+  // width: 200px;
+  height: 24px;
+  font-family: Gilroy;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.09;
+  letter-spacing: normal;
+  color: #262c40;
+  @media screen and (max-width: 768px) {
+    right: 318px;
+  }
+}
+
+.amount_int {
+  display: inline-block;
+}
+
+.amount__cent {
+  display: inline-block;
+  color: #8b98a7;
+}
+
 .balance__note {
   display: inline-block;
   position: absolute;
   left: 100px;
   top: 48px;
-
+  @media screen and (max-width: 768px) {
+    width: 667px;
+    height: 16px;
+    // left: 56px;
+    // top: 88px;
+    // text-align: center;
+  }
   width: 321px;
   height: 32px;
   font-family: "proxima-nova";
@@ -891,11 +1094,12 @@ code {
 
 .card__other__icon {
   position: absolute;
-  left: 320px;
   top: 20px;
+  right: 24px;
   width: 16px;
   height: 16px;
   object-fit: contain;
+  // fill: #b8bdce;
 }
 
 .LeftSidebar__NavMenu {
@@ -903,30 +1107,11 @@ code {
 }
 
 @media screen and (max-width: 1280px) {
-  .App {
-    width: 1284px; /* TODO after clear all border 1px set to 1280px */
-    height: 1228px;
-    background-color: #eef1f3;
-  }
-
-  .MainBody {
-    /* border: 1px dashed black; */
-
-    background-color: #eef1f3;
-    display: inline-block;
-    position: relative;
-    width: 920px;
-    height: 1196px; /* 1100 + 96 */
-  }
-
-  .NavMenu {
-    /* border: 1px dotted black; */
-
-    display: inline-block;
-    width: 920px;
-    height: 96px;
-    line-height: 96px;
-  }
+  // .App {
+  //   width: 1284px; /* TODO after clear all border 1px set to 1280px */
+  //   height: 1228px;
+  //   background-color: #eef1f3;
+  // }
 
   .NavMenu ul {
     margin-top: 0;
@@ -934,30 +1119,6 @@ code {
     padding-left: 136px;
 
     height: 96px;
-  }
-
-  .NavMenu li:last-of-type {
-    top: -95px;
-    margin-left: 634px;
-    position: relative;
-    /* bottom: 95px; why dont work? */
-  }
-
-  .Header {
-    width: 1280px;
-    height: 32px;
-    line-height: 32px;
-    background-image: linear-gradient(to right, #0057b7, #0d356c);
-  }
-
-  .Header li {
-    position: relative;
-    /* left: 1179px; */
-    left: 60.4%;
-
-    display: inline;
-    margin-right: 50px;
-    font-family: "proxima-nova";
   }
 
   .Header li:last-of-type {
@@ -977,30 +1138,19 @@ code {
     color: #fdfbfc;
   }
 
-  .Slider {
-    /* border: 1px solid pink; */
-
-    margin-top: 24px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 706px;
-    height: 160px;
-    border-radius: 4px;
-    box-shadow: 0 0 9px 0 rgba(13, 53, 108, 0.15);
-    background-color: #f0f1f3;
-  }
-
-  .EventHistory {
-    /* border: 1px solid orange; */
-
-    margin-top: 36px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 792px;
-    height: 828px;
-    border-radius: 4px;
-    background-color: #ffffff;
-  }
+  // .SliderCustom {
+  //   /* border: 1px solid pink; */
+  //   position: relative;
+  //
+  //   margin-top: 24px;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   width: 706px;
+  //   height: 160px;
+  //   border-radius: 4px;
+  //   box-shadow: 0 0 9px 0 rgba(13, 53, 108, 0.15);
+  //   background-color: #f0f1f3;
+  // }
 
   .LeftSidebar__NavMenu {
     display: none;
@@ -1008,16 +1158,6 @@ code {
 }
 
 @media screen and (max-width: 768px) {
-  .LeftSidebar {
-    /* border: 1px solid black; */
-
-    display: inline-block;
-    position: relative;
-    float: left;
-    width: 768px;
-    height: 1017px;
-  }
-
   .LeftSidebar__NavMenu {
     display: block;
 
@@ -1033,7 +1173,7 @@ code {
   .Balance {
     /* border: 1px solid green; */
 
-    margin-top: 3px;
+    margin-top: 2px;
     width: 768px;
     height: 120px;
     background-color: #ffffff;
@@ -1053,12 +1193,6 @@ code {
     width: 768px;
     height: 84px;
     background-color: #fff;
-  }
-
-  .App {
-    width: 772px; /* TODO after clear all border 1px set to 768px */
-    height: 1145px;
-    background-color: #eef1f3;
   }
 
   .MainBody {
@@ -1083,15 +1217,6 @@ code {
     background-image: linear-gradient(to right, #0057b7, #0d356c);
   }
 
-  .Header li {
-    position: relative;
-    /* left: 1179px; */
-    left: 60.4%;
-
-    display: inline;
-    margin-right: 50px;
-  }
-
   .Header li:last-of-type {
     /* margin-right: 100px; TODO */
     margin-left: 8px;
@@ -1123,16 +1248,16 @@ code {
     background-color: #f0f1f3;
   }
 
-  .EventHistory {
-    display: none;
-    /* border: 1px solid orange; */
-
-    margin-top: 36px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 792px;
-    height: 828px;
-    border-radius: 4px;
-    background-color: #ffffff;
-  }
+  // .EventHistory {
+  //   display: none;
+  //   /* border: 1px solid orange; */
+  //
+  //   margin-top: 36px;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   width: 792px;
+  //   height: 828px;
+  //   border-radius: 4px;
+  //   background-color: #ffffff;
+  // }
 }

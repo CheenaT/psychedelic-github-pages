@@ -14,7 +14,9 @@ import Menu from '../Components/Menu';
 import VerticalLine from '../Components/Lines/index.jsx'
 import GorizontalLine from '../Components/Lines/gorizontal.jsx'
 
-const Button = styled.button``;
+const Button = styled.button`
+  display: block;
+`;
 // export default Button;
 
 class App extends Component {
@@ -55,10 +57,10 @@ class App extends Component {
 
         <MainBody />
 
-        <Button>I'm styled components button</Button>
+        {/* <Button>I'm styled components button</Button>
         <Menu />
 
-        <Sidebar isOpen={true} fontSize={40}>
+         <Sidebar isOpen={true} fontSize={40}>
             <div>
               <a href="#">!!!!!Sidebar!!!! </a>
             </div>
@@ -69,7 +71,7 @@ class App extends Component {
             <Route exact path="/" component={IndexPage} />
             <Route path="/about" component={AboutPage} />
             <Route path="/settings" component={SettingsPage} />
-        </section>
+        </section> */}
       </div>
     );
   }
