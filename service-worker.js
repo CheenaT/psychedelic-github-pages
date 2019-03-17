@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/psychedelic-github-pages/precache-manifest.64467401f0ab1aba6369358df26c6299.js"
+  "/psychedelic-github-pages/precache-manifest.7a0c13d89f12c68329f201d472532298.js"
 );
 
 workbox.clientsClaim();
