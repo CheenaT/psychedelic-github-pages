@@ -40,24 +40,24 @@ self.__precacheManifest = [
     "url": "/psychedelic-github-pages/static/media/payment-transport.ff5ec91b.svg"
   },
   {
-    "revision": "2d2ae2556b24a45ff8d5ed86b07b5783",
-    "url": "/psychedelic-github-pages/static/media/ProximaNova-Regular.2d2ae255.woff"
-  },
-  {
-    "revision": "f97e3bbf73254b0112091d0192f17aec",
-    "url": "/psychedelic-github-pages/static/media/slick.f97e3bbf.svg"
-  },
-  {
     "revision": "ced611daf7709cc778da928fec876475",
     "url": "/psychedelic-github-pages/static/media/slick.ced611da.eot"
+  },
+  {
+    "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
+    "url": "/psychedelic-github-pages/static/media/slick.b7c9e1e4.woff"
   },
   {
     "revision": "d41f55a78e6f49a5512878df1737e58a",
     "url": "/psychedelic-github-pages/static/media/slick.d41f55a7.ttf"
   },
   {
-    "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
-    "url": "/psychedelic-github-pages/static/media/slick.b7c9e1e4.woff"
+    "revision": "f97e3bbf73254b0112091d0192f17aec",
+    "url": "/psychedelic-github-pages/static/media/slick.f97e3bbf.svg"
+  },
+  {
+    "revision": "2d2ae2556b24a45ff8d5ed86b07b5783",
+    "url": "/psychedelic-github-pages/static/media/ProximaNova-Regular.2d2ae255.woff"
   },
   {
     "revision": "b7c512788e3c77b0196f0bace8a88418",
