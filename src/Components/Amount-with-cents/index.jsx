@@ -13,19 +13,16 @@ export default class AmountWithCents extends React.Component {
     if (this.props.integerPart < 0) this.state.sign = "-";
     if (this.state.int + this.state.cent === 0)
       return <div className={this.props.className}>0.00 ₽</div>;
-    else if (
-      this.state.int !== this.state.int ||
-      this.state.cent !== this.state.cent
-    )
-      throw "NaN";
+    // else if ( isNaN(this.state.int) || isNaN(this.state.cent) )
+      // throw "NaN";
     else if (this.state.int >= MILLION)
       return (
         <div className={this.props.className}>
-          <div className="amount_int">{this.state.sign + Math.floor(this.state.int / MILLION) +
+          <div className="amount__int">{this.state.sign + Math.floor(this.state.int / MILLION) +
             " " +
             Math.floor((this.state.int - MILLION) / 1000) +
             " " +
-            (this.state.int % 1000)}</div>
+            Math.floor((this.state.int % 1000)/100) + Math.floor((this.state.int % 100)/10) + (this.state.int % 10)}</div>
             <div className="amount__cent">{'.' + Math.floor(this.state.cent / 10) + (this.state.cent % 10) + " ₽"}</div>
         </div>
       );
@@ -34,8 +31,8 @@ export default class AmountWithCents extends React.Component {
         <div className={this.props.className}>
           <div className="amount__int">{this.state.sign + Math.floor(this.state.int / 1000) +
             " " +
-            (this.state.int % 1000)}</div>
-          <div className="amount__cent">{Math.floor(this.state.cent / 10) +
+            Math.floor((this.state.int % 1000)/100) + Math.floor((this.state.int % 100)/10) + (this.state.int % 10)}</div>
+          <div className="amount__cent">{'.' + Math.floor(this.state.cent / 10) +
           (this.state.cent % 10) +
           " ₽"}</div>
         </div>
