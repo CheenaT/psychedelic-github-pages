@@ -36,15 +36,16 @@ class Card extends React.Component {
         {/* <div className="balance__amount">{this.props.balance}</div>
 
                 <div className="balance__note">{this.props.name}</div> */ console.log( Math.trunc(this.props.balance % 1 * 100))}
+        {!this.props.debtNoteInt &&
         <AmountWithCents
           className={"balance__amount hide-balance"}
           integerPart={Math.trunc(this.props.balance)}
           residuePart={Math.trunc(this.props.balance % 1 * 100)}
-        />
+        />}
         {this.props.debtNoteInt && (
           <div style={{ fontSize: "16px" }} className="balance__debt-note">
             <AmountWithCents
-              className={"amount-with-cents debt-note hide-balance"}
+              className={"amount-with-cents debt-note"}
               integerPart={this.props.debtNoteInt}
               residuePart={this.props.debtNoteResidue}
             />{" "}

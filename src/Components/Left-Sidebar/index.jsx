@@ -30,14 +30,17 @@ const List = styled.ul`
 class LeftSidebar extends React.Component {
   onClickHandler = () => {
     var els = document.querySelectorAll(".hide-balance");
+    var debt = document.querySelector(".balance__debt-note");
 
     if (getComputedStyle(els[0], "").display === "none") {
       document.querySelector(".hide-balance-text").innerHTML = "Скрыть балансы";
-      els.forEach(el => (el.style.display = "inline-block"));
+      els.forEach(el => (el.style.display = "block"));
+      debt.style.display = "inline-block";
     } else {
       document.querySelector(".hide-balance-text").innerHTML =
         "Показать балансы";
       els.forEach(el => (el.style.display = "none"));
+      debt.style.display = "none";
     }
   };
 

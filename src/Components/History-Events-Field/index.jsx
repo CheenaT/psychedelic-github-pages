@@ -1,48 +1,14 @@
 import React from "react";
 import HistoryEvent from "../History-Event";
 import EventSeparator from "../History-Event-Separator";
-import StatusIconError from "../../img/status-error-16.svg";
-import EventIcon from "../../img/beeline.png";
-import StatusIconLocked from "../../img/status-lock.png";
-import EventIconYaTaxi from "../../img/yandex-taxi.png";
-import EventIconTravelTickets from "../../img/payment-transport.svg";
 import Input from "../Input";
 import HistoryEventDate from "../History-Event-Date";
 import { ReactComponent as ArrowDownIcon } from "../../img/angle-arrow-down-primary.svg";
 import { ReactComponent as ButtonRoundSmall } from "../../img/button-round-small.svg";
+import { data } from './data.js'
 
 import styled from "styled-components";
 import uniqueId from "lodash/uniqueId";
-
-const data = [
-  {
-    icon: EventIcon,
-    type: "Cellular service",
-    name: "Phone biling",
-    cardFrom: "Salary card *0322",
-    integerPart: "-10 200",
-    residuePart: ".00 ₽",
-    status: ""
-  },
-  {
-    icon: EventIconYaTaxi,
-    type: "Transport",
-    name: "YANDEX TAXI",
-    cardFrom: "Salary card *0322",
-    integerPart: "-546",
-    residuePart: ".00 ₽",
-    status: StatusIconLocked
-  },
-  {
-    icon: EventIconTravelTickets,
-    type: "RAILWAY AND AIR TICKETS",
-    name: "Aeroflot - tikets to Sochi",
-    cardFrom: "Salary card *0322",
-    integerPart: "-10 000",
-    residuePart: ".00 ₽",
-    status: StatusIconError
-  }
-];
 
 const date = [
   { day: "26", month: "march", year: "2018" },
