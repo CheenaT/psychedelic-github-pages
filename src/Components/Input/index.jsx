@@ -6,22 +6,21 @@ class Input extends React.Component {
   };
   constructor(props) {
     super(props);
-    // this.state = { value: "" };
 
     this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleChange(event) {
     this.setState({ inputValue: event.target.value });
-    console.log(this.state.inputValue);
   }
   render() {
     return (
-      <input
-        type="text"
-        value={this.state.inputValue}
-        onChange={this.handleChange}
-      />
+      <div className={this.props.className}>
+        <input
+          type="text"
+          value={this.state.inputValue}
+          onChange={this.handleChange}
+        />
+      </div>
     );
   }
 }

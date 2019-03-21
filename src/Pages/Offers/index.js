@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 
-class IndexPage extends Component {
+export default class IndexPage extends Component {
     render () {
         return (
-            <h2>Index</h2>
+            <h2></h2>
         )
     }
 }
-
-export default IndexPage;
