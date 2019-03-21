@@ -7,8 +7,10 @@ class MainBody extends React.Component {
   render() {
     return(
       <div className="MainBody">
+        {/* <NavMenu /> */}
         <NavMenu />
         <Slider />
+        {/* <EventHistory /> */}
         <EventHistory />
       </div>
     );

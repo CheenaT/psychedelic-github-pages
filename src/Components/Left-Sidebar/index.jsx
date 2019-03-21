@@ -17,9 +17,21 @@ import LinkedCardIcon from "../../img/linked-card-lg.svg";
 import styled from "styled-components";
 
 const cards = [
-  { balance: 190000.99, name: `Вклад "Двери открыты"`, productImageSRC: require("../../img/deposit.svg") },
-  { balance: 1458000.1, name: "Счет *5536", productImageSRC: require("../../img/account.svg") },
-  { balance: -1456485.01, name: "Ипотека", productImageSRC: require("../../img/mortgage.svg") }
+  {
+    balance: 190000.99,
+    name: `Вклад "Двери открыты"`,
+    productImageSRC: require("../../img/deposit.svg")
+  },
+  {
+    balance: 1458000.1,
+    name: "Счет *5536",
+    productImageSRC: require("../../img/account.svg")
+  },
+  {
+    balance: -1456485.01,
+    name: "Ипотека",
+    productImageSRC: require("../../img/mortgage.svg")
+  }
 ];
 
 const List = styled.ul`
@@ -30,14 +42,17 @@ const List = styled.ul`
 class LeftSidebar extends React.Component {
   onClickHandler = () => {
     var els = document.querySelectorAll(".hide-balance");
+    var debt = document.querySelector(".balance__debt-note");
 
     if (getComputedStyle(els[0], "").display === "none") {
       document.querySelector(".hide-balance-text").innerHTML = "Скрыть балансы";
-      els.forEach(el => (el.style.display = "inline-block"));
+      els.forEach(el => (el.style.display = "block"));
+      debt.style.display = "inline-block";
     } else {
       document.querySelector(".hide-balance-text").innerHTML =
         "Показать балансы";
       els.forEach(el => (el.style.display = "none"));
+      debt.style.display = "none";
     }
   };
 
@@ -51,19 +66,47 @@ class LeftSidebar extends React.Component {
         <HideBalanceField onClick={this.onClickHandler} />
         <Balance />
         {/* <Cards /> */}
-        <Card separatorFlag={true} name={"Зарплатная карта *1575"} balance={1458000.99}
-          imageSRC={require("./../../img/gold.png")} paymentSystemImageSRC={require("./../../img/mir.svg")}/>
-                <img className="left-sidebar__linked-card" src={LinkedCardIcon} alt="" width="20px" height="20px"/>
-        <Card marginTopFlag={true} name={"Карта сына *6675"} separatorFlag={true} balance={23405.99}
-          imageSRC={require("./../../img/default.svg")} paymentSystemImageSRC={require("./../../img/jcb.svg")}/>
-        <Card marginTopFlag={true} name={"Кредитная карта *6675"} width={'108px'} debtNoteInt={15000}
-          debtNoteResidue={56} balance={32000.99}
-          imageSRC={require("./../../img/platinum@2x.png")} paymentSystemImageSRC={require("./../../img/visa.svg")}
-        /> {/* TODO Separator | почему работает при width={108} без px */}
+        <Card
+          separatorFlag={true}
+          name={"Зарплатная карта *1575"}
+          balance={1458000.99}
+          imageSRC={require("./../../img/gold.png")}
+          paymentSystemImageSRC={require("./../../img/mir.svg")}
+        />
+        <img
+          className="left-sidebar__linked-card"
+          src={LinkedCardIcon}
+          alt=""
+          width="20px"
+          height="20px"
+        />
+        <Card
+          marginTopFlag={true}
+          name={"Карта сына *6675"}
+          separatorFlag={true}
+          balance={23405.99}
+          imageSRC={require("./../../img/default.svg")}
+          paymentSystemImageSRC={require("./../../img/jcb.svg")}
+        />
+        <Card
+          marginTopFlag={true}
+          name={"Кредитная карта *6675"}
+          width={"108px"}
+          debtNoteInt={15000}
+          debtNoteResidue={56}
+          balance={32000.99}
+          imageSRC={require("./../../img/platinum@2x.png")}
+          paymentSystemImageSRC={require("./../../img/visa.svg")}
+        />{" "}
+        {/* TODO Separator | почему работает при width={108} без px */}
         <List>
           {cards.map(({ balance, name, productImageSRC }) => (
             <li key={name}>
-              <Card balance={balance} name={name} productImageSRC={productImageSRC}/>
+              <Card
+                balance={balance}
+                name={name}
+                productImageSRC={productImageSRC}
+              />
             </li>
           ))}
         </List>

@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 import styled from 'styled-components';
 
-import IndexPage from '../Pages/Index';
-import AboutPage from '../Pages/About';
-import SettingsPage from '../Pages/Settings';
+// import IndexPage from '../Pages/Index';
+// import AboutPage from '../Pages/About';
+// import SettingsPage from '../Pages/Settings';
 
 import Header from '../Components/Header';
 import LeftSidebar from '../Components/Left-Sidebar';
@@ -18,6 +18,7 @@ const Button = styled.button`
   display: block;
 `;
 // export default Button;
+// TODO routing, axios
 
 class App extends Component {
 
@@ -50,7 +51,7 @@ class App extends Component {
     return (
       <div className="App">
         { console.log('render') }
-        <GorizontalLine />
+        {/* <GorizontalLine /> */}
         <Header />
         <LeftSidebar />
         <VerticalLine />
